@@ -3,30 +3,23 @@
   padding: 0;
 }
 
-div {
-  width: auto;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 40vw;
-  height: 300px;
-}
+div {}
 
 h2 {
+  font-size: 30px;
   margin: 10px;
 }
 
 @media (max-width: 800px) {
   div {
-      width: auto;
-      height: auto;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      width: 40vw;
-      height: 300px;
-    }
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 30vw;
+    height: 200px;
+  }
 }
 
 form {
@@ -46,6 +39,7 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
+  background: url(background.png) center/cover no-repeat fixed border-box;
 }
 
 
@@ -53,17 +47,90 @@ body {
   font-family: 'Courier New',
     Courier,
     monospace;
-  font-size: 35px;
+  font-weight: bold;
+  font-size: 25px;
   border: 100px;
   display: block;
-  padding: 15px;
+  padding: 10px;
   width: 100%;
+  color: white;
+  background-color: blueviolet;
+  border-radius: 20px;
+}
+
+#container {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 600px;
+  height: 27vh;
 }
 
 input {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   margin: 0;
-  padding: 20px;
+  padding: 10px 20px;
   width: 100%;
   box-sizing: border-box;
-  
+  font-size: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* Common popup styles */
+.modal,
+.modal2 {
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100%;
+  width: 320px;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Correct Answer Popup */
+#popup {
+  background: green;
+}
+
+/* Wrong Answer Popup */
+#popup2 {
+  background: red;
+}
+
+/* Slide Up Animation */
+.show {
+  bottom: 50px !important;
+  opacity: 1 !important;
+}
+
+/* Spin Effect */
+.spin {
+  animation: spin 0.5s linear;
+}
+
+@keyframes spin {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
 }

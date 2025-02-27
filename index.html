@@ -5,21 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
+    <script src="index.js" defer></script>
   </head>
   <body>
-    <div>
-      <form>
+    <div id="popup" class="modal">
+      <div id="modal-content">
+        <p>correct answer +1</p>
+      </div>
+    </div>
+    <div id="popup2" class="modal2">
+      <div id="modal-content2">
+        <p>wrong answer -1</p>
+      </div>
+    </div>
+    <div id="container">
+      <form id="quiz">
         <h1>
           Score ->
           <spam id="score">0</spam>
         </h1>
         <h2>
           Q. what is
-          <span id="n0">0</span>
+          <span id="n0"></span>
           <span id="MOT"></span>
           <span id="n1"></span>
         </h2>
-        <input title="text" type="number" />
+        <input title="text" type="number" required />
         <button type="submit" id="submitbtn">Submit</button>
       </form>
     </div>
